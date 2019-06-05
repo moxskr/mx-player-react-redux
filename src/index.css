@@ -1,13 +1,102 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+.app{
+    width:100%;
+    height: 100vh;
 }
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+body{
+    background-color: #eee;
+}
+.player img{
+    width: 100%;
+}
+.player-controls{
+    height: 60px;
+    background-color: #333;
+    width: 100%;
+}
+.player-controls .player-progress-line{
+    width: 100%;
+    height: 4px;
+    cursor: pointer;
+    background-color: #fff;
+}
+.player-progress-line .line{
+    background-color: #ff1c29;
+    height: 4px;
+}
+.player-btns{
+    width: 100%;
+    height: 76px;
+}
+.player-btns ul{
+    margin : 0px;
+}
+.player-btns ul li{
+    display: inline-block;
+    margin: 10px;
+}
+.player-btns .btn{
+    padding: 0px;
+    font-size: 20px;
+    color: #ff1c29;
+}
+.volume-line{
+    width: 60px;
+    cursor: pointer;
+    height: 4px;
+    background-color: white;
+    display: inline-block;
+}
+.volume-line .line{
+    height: 4px;
+    background-color: #ff1c29;
+}
+.line{
+    position: relative;
+}
+.line:after{
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    content: "";
+    top: -2px;
+    right: -4px;
+    position: absolute;
+    background-color: #ff1c29;
+    display: none;
+}
+.player-progress-line:hover .line:after,.volume-line:hover .line:after{
+    display: block;
+}
+.track-list{
+    background-color: #333;
+}
+.col-lg-4{
+    padding-left: 0px;
+    padding-right: 0px;
+}
+.track-list-title{
+    color: #ff1c29;
+    font-size: 24px;
+    text-align: center;
+    padding: 10px;
+    border-bottom: 4px solid  white;
+}
+.track-list-item{
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+    width: 100%;
+}
+.track-list-item h4{
+    font-size: 18px;
+    color: white;
+}
+.track-list-item .btn{
+    color: #ff1c29;
+}
+.row.track-list-item{
+    margin: 0px;
+}
+.track-list-item .col-6{
+    text-align: center;
+    padding-top: 8px;
 }
